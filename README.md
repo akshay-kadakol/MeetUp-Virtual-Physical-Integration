@@ -220,7 +220,7 @@ CREATE TABLE Feedback (
 );
 
 
-- `System_Constraints.md` – Database rules and constraints
+
 - # System Constraints
 
 - Users must provide FirstName and LastName during registration
@@ -248,6 +248,38 @@ CREATE TABLE Feedback (
 3. Offline friends join the virtual event
 4. System collects feedback after the event
 
+# Software Design - Method Details
+
+## Method: userSignUp(email, password)
+- Checks if user already exists
+- Registers new user if email is unique
+- Returns confirmation or error
+
+<img width="106" alt="image" src="https://github.com/user-attachments/assets/08167dcc-9e62-448e-9d96-27b32f0219a8" /> <img width="103" alt="image" src="https://github.com/user-attachments/assets/9d4e648d-9d92-4a02-952a-668b9d574b99" />
+
+## Method: userLogin(email, password)
+- Retrieves stored password for provided email
+- Authenticates credentials
+- Returns login success or failure message
+
+## Method: getPreferences(userID, preferenceList)
+- Validates preferences
+- Saves user preferences to the database
+- Confirms success or error
+
+## Method: getEvents(profile, preferences)
+- Analyzes user preferences
+- Retrieves matching events from the database
+- Displays personalized event list
+
+## Method: generateInvitation(userID, eventID, email, phone)
+- Validates Email and Phone
+- Sends event invitation via Email/SMS
+- Confirms successful invitation
+
+## Method: submitFeedback(userID, feedbackText)
+- Stores user feedback in the database
+- Updates recommendation algorithm based on feedback
 
 ---
 
