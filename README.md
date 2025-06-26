@@ -37,13 +37,14 @@ This project introduces an integrated platform that:
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
-MeetUp-Virtual-Physical-Integration/
-├── README.md
-├── MeetUp_Project_Report.pdf
-├── Diagrams/
-├── Design/
+- MeetUp-Virtual-Physical-Integration/
+   - README.md
+   - MeetUp_Project_Report.pdf
+   - Diagrams/
+   - Design/
+
 
 ---
 
