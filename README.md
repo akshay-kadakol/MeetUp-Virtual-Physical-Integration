@@ -58,6 +58,35 @@ Visual representations of the system's design and workflows are available in the
 - Sequence Diagrams – User interaction sequences  
 - ER Diagram – Database structure  
 
+## 🗂️ System Diagrams
+
+### BPMN - Offline Event Process
+![BPMN Offline](BPMN_Offline_Event.png)
+
+### BPMN - Online Event Process
+![BPMN Online](BPMN_Online_Event.png)
+
+### Context Diagram
+![Context Diagram](Context_Diagram.png)
+
+### Use Case Diagram
+![Use Case Diagram](Use_Case_Diagram.png)
+
+### Class Diagram (Without Methods)
+![Class Diagram No Methods](Class_Diagram_No_Methods.png)
+
+### Class Diagram (With Methods)
+![Class Diagram With Methods](Class_Diagram_With_Methods.png)
+
+### Sequence Diagram - Offline Interaction
+![Sequence Offline](Sequence_Diagram_Offline.png)
+
+### Sequence Diagram - Online Interaction
+![Sequence Online](Sequence_Diagram_Online.png)
+
+### Entity Relationship Diagram (ERD)
+![ER Diagram](ER_Diagram.png)
+
 ---
 
 ## 📐 System Design Documentation
