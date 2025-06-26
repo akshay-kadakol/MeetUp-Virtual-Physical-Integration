@@ -49,34 +49,34 @@ MeetUp-Virtual-Physical-Integration/
 
 ## 🗂️ System Diagrams
 
-Visual representations of the system's design and workflows are available in the `/Diagrams` folder:
+Visual representations of the system's design and workflows:
 
 ### BPMN - Offline Event Process  
-[BPMN_Offline_Event](https://github.com/user-attachments/assets/bba8c1a4-1abe-4373-9b00-7a5efbf3d944)
+![BPMN Offline](https://github.com/user-attachments/assets/bba8c1a4-1abe-4373-9b00-7a5efbf3d944)
 
 ### BPMN - Online Event Process  
-[BPMN_Online_Event](https://github.com/user-attachments/assets/ae31aad6-481f-4557-b4f9-6f6dc7b19bf1)
+![BPMN Online](https://github.com/user-attachments/assets/ae31aad6-481f-4557-b4f9-6f6dc7b19bf1)
 
 ### Context Diagram  
-[Context_Diagram](https://github.com/user-attachments/assets/ea5b40f0-86b2-4244-ab84-ffac4ec357c9)
+![Context Diagram](https://github.com/user-attachments/assets/ea5b40f0-86b2-4244-ab84-ffac4ec357c9)
 
 ### Use Case Diagram  
-[Use_Case_Diagram](https://github.com/user-attachments/assets/d01fabbf-3fb5-4050-b8c2-ab0763a1d609)
+![Use Case Diagram](https://github.com/user-attachments/assets/d01fabbf-3fb5-4050-b8c2-ab0763a1d609)
 
 ### Class Diagram (Without Methods)  
-[Class_Diagram_No_Methods](https://github.com/user-attachments/assets/00a1b60d-a6b1-4b4c-83da-d2adfd99df6f)
+![Class Diagram No Methods](https://github.com/user-attachments/assets/00a1b60d-a6b1-4b4c-83da-d2adfd99df6f)
 
 ### Class Diagram (With Methods)  
-[Class_Diagram_With_Methods](https://github.com/user-attachments/assets/f6728617-ecd9-4c04-9d38-2f73c9c3a707)
+![Class Diagram With Methods](https://github.com/user-attachments/assets/f6728617-ecd9-4c04-9d38-2f73c9c3a707)
 
 ### Sequence Diagram - Offline Interaction  
-[Sequence_Diagram_Offline](https://github.com/user-attachments/assets/b15fa239-9456-468a-adea-86c9e3d97b6f)
+![Sequence Offline](https://github.com/user-attachments/assets/b15fa239-9456-468a-adea-86c9e3d97b6f)
 
 ### Sequence Diagram - Online Interaction  
-[Sequence_Diagram_Online](https://github.com/user-attachments/assets/d82603e5-2b34-41c3-8e7d-cd914c1a3add)
+![Sequence Online](https://github.com/user-attachments/assets/d82603e5-2b34-41c3-8e7d-cd914c1a3add)
 
 ### Entity Relationship Diagram (ERD)  
-[ER_Diagram](https://github.com/user-attachments/assets/f0687cfc-d5fe-4904-8234-6015bfb21999)
+![ER Diagram](https://github.com/user-attachments/assets/f0687cfc-d5fe-4904-8234-6015bfb21999)
 
 ---
 
