@@ -51,42 +51,14 @@ MeetUp-Virtual-Physical-Integration/
 
 Visual representations of the system's design and workflows are available in the `/Diagrams` folder:
 
-- BPMN Diagrams – Offline & Online Event Processes  
+- BPMN Diagrams – Offline & Online Event Processes
+- ![BPMN_Offline_Event](https://github.com/user-attachments/assets/7b38f8c2-6a82-4db4-a740-6555a4aac730)
 - Context Diagram – System boundaries and interactions  
 - Use Case Diagram – User-system interaction flows  
 - Class Diagrams – System structure (With & Without Methods)  
 - Sequence Diagrams – User interaction sequences  
-- ER Diagram – Database structure  
-
-## 🗂️ System Diagrams
-
-### BPMN - Offline Event Process
-![BPMN Offline](BPMN_Offline_Event.png)
-
-### BPMN - Online Event Process
-![BPMN Online](BPMN_Online_Event.png)
-
-### Context Diagram
-![Context Diagram](Context_Diagram.png)
-
-### Use Case Diagram
-![Use Case Diagram](Use_Case_Diagram.png)
-
-### Class Diagram (Without Methods)
-![Class Diagram No Methods](Class_Diagram_No_Methods.png)
-
-### Class Diagram (With Methods)
-![Class Diagram With Methods](Class_Diagram_With_Methods.png)
-
-### Sequence Diagram - Offline Interaction
-![Sequence Offline](Sequence_Diagram_Offline.png)
-
-### Sequence Diagram - Online Interaction
-![Sequence Online](Sequence_Diagram_Online.png)
-
-### Entity Relationship Diagram (ERD)
-![ER Diagram](ER_Diagram.png)
-
+- ER Diagram – Database structure
+- 
 ---
 
 ## 📐 System Design Documentation
