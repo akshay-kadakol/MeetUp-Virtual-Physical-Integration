@@ -85,11 +85,169 @@ Visual representations of the system's design and workflows:
 
 The `/Design` folder includes:
 
-- `Functional_Specifications.md` – System functionalities & user stories  
-- `Class_Methods.md` – Method logic for each system class  
-- `Database_Schema.sql` – SQL script defining database tables and relationships  
-- `System_Constraints.md` – Database rules and constraints  
-- `Sequence_Logic.md` – Event interaction process logic  
+- `Functional_Specifications.md` – System functionalities & user stories
+- # Functional Specifications
+
+- The user should be able to register into the application by entering all details.
+- Users should be able to log in with valid credentials provided during signup.
+- Users must set their preferences (event categories, locations, interests) for accurate event recommendations.
+- The system should analyze preferences and generate personalized event recommendations from the database.
+- The user should be able to finalize participation in an event.
+- The system should generate event invitations for online and offline friends.
+- Users can invite offline friends via SMS or Email and share event links with online friends on social media.
+- After participating in events, the system should collect user feedback (ratings and comments).
+- The recommendation algorithm must be refined based on collected feedback to improve future suggestions.
+
+
+- `Class_Methods.md` – Method logic for each system class
+- # Class Responsibilities and Methods
+
+## SignUp Class
+Method: userSignUp(email, password)
+- Registers user if email is unique
+- Returns success or error message
+
+## Login Class
+Method: userLogin(email, password)
+- Authenticates user credentials
+- Provides system access or error feedback
+
+## Preferences Class
+Method: getPreferences(userID, preferenceList)
+- Stores and updates user event preferences
+
+## Events Class
+Method: getEvents(profile, preferences)
+- Analyzes preferences and generates event recommendations
+
+## Invitation Class
+Method: generateInvitation(userID, eventID, email, phone)
+- Sends invitations to offline friends via Email/SMS
+
+## Feedback Class
+Method: submitFeedback(userID, feedbackText)
+- Stores user feedback to refine recommendations
+
+- `Database_Schema.sql` – SQL script defining database tables and relationships
+- CREATE TABLE Users (
+    UserID INT PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE LoginInfo (
+    Email VARCHAR(100) NOT NULL,
+    Password VARCHAR(100) NOT NULL,
+    UserID INT,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+CREATE TABLE Location (
+    LocationID INT PRIMARY KEY,
+    City VARCHAR(50) NOT NULL,
+    State VARCHAR(50) NOT NULL,
+    Country VARCHAR(50) NOT NULL,
+    ZipCode VARCHAR(10) NOT NULL,
+    UserID INT,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+CREATE TABLE Preferences (
+    PreferenceID INT PRIMARY KEY,
+    UserID INT,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+CREATE TABLE Events (
+    EventID INT PRIMARY KEY,
+    EventName VARCHAR(100) NOT NULL,
+    EventDate DATE NOT NULL,
+    EventTime TIME NOT NULL,
+    EventLocation VARCHAR(200) NOT NULL,
+    PreferenceID INT,
+    FOREIGN KEY (PreferenceID) REFERENCES Preferences(PreferenceID)
+);
+
+CREATE TABLE EventDetails (
+    EventID INT,
+    EventDescription TEXT NOT NULL,
+    FOREIGN KEY (EventID) REFERENCES Events(EventID)
+);
+
+CREATE TABLE Invitation (
+    InvitationID INT PRIMARY KEY,
+    EventName VARCHAR(100) NOT NULL,
+    EventTime TIME NOT NULL,
+    EventDate DATE NOT NULL,
+    EventLocation VARCHAR(200) NOT NULL,
+    SharingDetails TEXT NOT NULL,
+    InvitationLink TEXT NOT NULL,
+    EventID INT,
+    FOREIGN KEY (EventID) REFERENCES Events(EventID)
+);
+
+CREATE TABLE EventLocation (
+    EventID INT,
+    Street VARCHAR(100) NOT NULL,
+    City VARCHAR(50) NOT NULL,
+    State VARCHAR(50) NOT NULL,
+    ZipCode VARCHAR(10) NOT NULL,
+    FOREIGN KEY (EventID) REFERENCES Events(EventID)
+);
+
+CREATE TABLE OfflineUserDetails (
+    InvitationID INT,
+    Email VARCHAR(100) NOT NULL,
+    PhoneNumber VARCHAR(15) NOT NULL,
+    FOREIGN KEY (InvitationID) REFERENCES Invitation(InvitationID)
+);
+
+CREATE TABLE FinalizeEvent (
+    EventID INT,
+    EventName VARCHAR(100) NOT NULL,
+    UserConfirmation BOOLEAN NOT NULL,
+    UserID INT,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    FOREIGN KEY (EventID) REFERENCES Events(EventID)
+);
+
+CREATE TABLE Feedback (
+    FeedbackID INT PRIMARY KEY,
+    UserID INT,
+    Rating INT CHECK (Rating BETWEEN 1 AND 5),
+    Comments TEXT,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+
+- `System_Constraints.md` – Database rules and constraints
+- # System Constraints
+
+- Users must provide FirstName and LastName during registration
+- Login requires non-null Email and Password fields
+- Preferences must be set before recommendations are generated
+- Events require EventName, Date, Time, and Location to be stored
+- Invitations cannot be sent without valid Email or Phone for offline users
+- Feedback cannot be submitted with empty fields
+- Event invitations require both online (social media) and offline (SMS/Email) options
+
+ 
+- `Sequence_Logic.md` – Event interaction process logic
+- # Sequence Logic for Major Scenarios
+
+## Scenario: Meet Online Friends in an Offline Event
+1. User receives personalized offline event recommendations
+2. User finalizes participation in an event
+3. System generates a shareable event invitation
+4. User shares invitation via social media for online friends
+5. User invites offline friends via SMS or Email
+
+## Scenario: Meet Offline Friends in an Online Event
+1. User receives virtual event recommendations
+2. User chooses to invite offline friends via SMS or Email
+3. Offline friends join the virtual event
+4. System collects feedback after the event
+
 
 ---
 
