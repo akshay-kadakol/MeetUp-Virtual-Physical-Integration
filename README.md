@@ -179,13 +179,17 @@ Method: submitFeedback(userID, feedbackText)
 - Validates preferences
 - Saves user preferences to the database
 - Confirms success or error
-               <img width="82" alt="image" src="https://github.com/user-attachments/assets/c34d801b-786c-4b08-a1c8-15d5b80d397b" />
+
+- 
+- <img width="82" alt="image" src="https://github.com/user-attachments/assets/c34d801b-786c-4b08-a1c8-15d5b80d397b" />
 
 ## Method: getEvents(profile, preferences)
 - Analyzes user preferences
 - Retrieves matching events from the database
 - Displays personalized event list
-  <img width="109" alt="image" src="https://github.com/user-attachments/assets/54c2bb69-fcd9-4d2a-a6f3-d0d882d3ce08" />                 <img width="82" alt="image" src="https://github.com/user-attachments/assets/39a44a3f-1a68-4182-ba06-8035faae6969" />
+ -
+ -
+ -   <img width="109" alt="image" src="https://github.com/user-attachments/assets/54c2bb69-fcd9-4d2a-a6f3-d0d882d3ce08" />                 <img width="82" alt="image" src="https://github.com/user-attachments/assets/39a44a3f-1a68-4182-ba06-8035faae6969" />
 
 
 
@@ -193,7 +197,9 @@ Method: submitFeedback(userID, feedbackText)
 - Validates Email and Phone
 - Sends event invitation via Email/SMS
 - Confirms successful invitation
--   <img width="82" alt="image" src="https://github.com/user-attachments/assets/36049a6d-43d4-4c78-84b6-16513583388c" />                     <img width="84" alt="image" src="https://github.com/user-attachments/assets/eb994050-b0a3-461f-9335-c3d26a0b3759" />                     <img width="84" alt="image" src="https://github.com/user-attachments/assets/5c6269ab-482c-4b0e-8f6d-0be2b91cc563" />               <img width="83" alt="image" src="https://github.com/user-attachments/assets/94d67743-cfed-4b17-92db-b346f89ccd3a" />
+
+ 
+ <img width="82" alt="image" src="https://github.com/user-attachments/assets/36049a6d-43d4-4c78-84b6-16513583388c" />                     <img width="84" alt="image" src="https://github.com/user-attachments/assets/eb994050-b0a3-461f-9335-c3d26a0b3759" />                     <img width="84" alt="image" src="https://github.com/user-attachments/assets/5c6269ab-482c-4b0e-8f6d-0be2b91cc563" />               <img width="83" alt="image" src="https://github.com/user-attachments/assets/94d67743-cfed-4b17-92db-b346f89ccd3a" />
 
                
 
@@ -202,7 +208,7 @@ Method: submitFeedback(userID, feedbackText)
 ## Method: submitFeedback(userID, feedbackText)
 - Stores user feedback in the database
 - Updates recommendation algorithm based on feedback
-          <img width="85" alt="image" src="https://github.com/user-attachments/assets/2bd2e583-be27-4901-b652-6f5a533b095a" />
+- <img width="85" alt="image" src="https://github.com/user-attachments/assets/2bd2e583-be27-4901-b652-6f5a533b095a" />
 
 ---
 
