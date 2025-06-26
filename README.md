@@ -128,99 +128,6 @@ Method: generateInvitation(userID, eventID, email, phone)
 Method: submitFeedback(userID, feedbackText)
 - Stores user feedback to refine recommendations
 
-- `Database_Schema.sql` – SQL script defining database tables and relationships
-- CREATE TABLE Users (
-    UserID INT PRIMARY KEY,
-    FirstName VARCHAR(50) NOT NULL,
-    LastName VARCHAR(50) NOT NULL
-);
-
-CREATE TABLE LoginInfo (
-    Email VARCHAR(100) NOT NULL,
-    Password VARCHAR(100) NOT NULL,
-    UserID INT,
-    FOREIGN KEY (UserID) REFERENCES Users(UserID)
-);
-
-CREATE TABLE Location (
-    LocationID INT PRIMARY KEY,
-    City VARCHAR(50) NOT NULL,
-    State VARCHAR(50) NOT NULL,
-    Country VARCHAR(50) NOT NULL,
-    ZipCode VARCHAR(10) NOT NULL,
-    UserID INT,
-    FOREIGN KEY (UserID) REFERENCES Users(UserID)
-);
-
-CREATE TABLE Preferences (
-    PreferenceID INT PRIMARY KEY,
-    UserID INT,
-    FOREIGN KEY (UserID) REFERENCES Users(UserID)
-);
-
-CREATE TABLE Events (
-    EventID INT PRIMARY KEY,
-    EventName VARCHAR(100) NOT NULL,
-    EventDate DATE NOT NULL,
-    EventTime TIME NOT NULL,
-    EventLocation VARCHAR(200) NOT NULL,
-    PreferenceID INT,
-    FOREIGN KEY (PreferenceID) REFERENCES Preferences(PreferenceID)
-);
-
-CREATE TABLE EventDetails (
-    EventID INT,
-    EventDescription TEXT NOT NULL,
-    FOREIGN KEY (EventID) REFERENCES Events(EventID)
-);
-
-CREATE TABLE Invitation (
-    InvitationID INT PRIMARY KEY,
-    EventName VARCHAR(100) NOT NULL,
-    EventTime TIME NOT NULL,
-    EventDate DATE NOT NULL,
-    EventLocation VARCHAR(200) NOT NULL,
-    SharingDetails TEXT NOT NULL,
-    InvitationLink TEXT NOT NULL,
-    EventID INT,
-    FOREIGN KEY (EventID) REFERENCES Events(EventID)
-);
-
-CREATE TABLE EventLocation (
-    EventID INT,
-    Street VARCHAR(100) NOT NULL,
-    City VARCHAR(50) NOT NULL,
-    State VARCHAR(50) NOT NULL,
-    ZipCode VARCHAR(10) NOT NULL,
-    FOREIGN KEY (EventID) REFERENCES Events(EventID)
-);
-
-CREATE TABLE OfflineUserDetails (
-    InvitationID INT,
-    Email VARCHAR(100) NOT NULL,
-    PhoneNumber VARCHAR(15) NOT NULL,
-    FOREIGN KEY (InvitationID) REFERENCES Invitation(InvitationID)
-);
-
-CREATE TABLE FinalizeEvent (
-    EventID INT,
-    EventName VARCHAR(100) NOT NULL,
-    UserConfirmation BOOLEAN NOT NULL,
-    UserID INT,
-    FOREIGN KEY (UserID) REFERENCES Users(UserID),
-    FOREIGN KEY (EventID) REFERENCES Events(EventID)
-);
-
-CREATE TABLE Feedback (
-    FeedbackID INT PRIMARY KEY,
-    UserID INT,
-    Rating INT CHECK (Rating BETWEEN 1 AND 5),
-    Comments TEXT,
-    FOREIGN KEY (UserID) REFERENCES Users(UserID)
-);
-
-
-
 - # System Constraints
 
 - Users must provide FirstName and LastName during registration
@@ -255,31 +162,45 @@ CREATE TABLE Feedback (
 - Registers new user if email is unique
 - Returns confirmation or error
 
-<img width="106" alt="image" src="https://github.com/user-attachments/assets/08167dcc-9e62-448e-9d96-27b32f0219a8" /> <img width="103" alt="image" src="https://github.com/user-attachments/assets/9d4e648d-9d92-4a02-952a-668b9d574b99" />
+<img width="106" alt="image" src="https://github.com/user-attachments/assets/08167dcc-9e62-448e-9d96-27b32f0219a8" />                 <img width="103" alt="image" src="https://github.com/user-attachments/assets/9d4e648d-9d92-4a02-952a-668b9d574b99" />
 
 ## Method: userLogin(email, password)
 - Retrieves stored password for provided email
 - Authenticates credentials
 - Returns login success or failure message
+<img width="114" alt="image" src="https://github.com/user-attachments/assets/330b7c94-0e99-4d93-8508-055b104bda92" />                 <img width="114" alt="image" src="https://github.com/user-attachments/assets/3e8cc322-0e5b-4663-a658-aac496714b16" />                <img width="109" alt="image" src="https://github.com/user-attachments/assets/e5992931-5e01-4c90-9fcb-5e0555a84bc3" />
+
+
+
 
 ## Method: getPreferences(userID, preferenceList)
 - Validates preferences
 - Saves user preferences to the database
 - Confirms success or error
+<img width="82" alt="image" src="https://github.com/user-attachments/assets/c34d801b-786c-4b08-a1c8-15d5b80d397b" />
 
 ## Method: getEvents(profile, preferences)
 - Analyzes user preferences
 - Retrieves matching events from the database
 - Displays personalized event list
+- <img width="109" alt="image" src="https://github.com/user-attachments/assets/54c2bb69-fcd9-4d2a-a6f3-d0d882d3ce08" />                 <img width="82" alt="image" src="https://github.com/user-attachments/assets/39a44a3f-1a68-4182-ba06-8035faae6969" />
+
+
 
 ## Method: generateInvitation(userID, eventID, email, phone)
 - Validates Email and Phone
 - Sends event invitation via Email/SMS
 - Confirms successful invitation
+- <img width="82" alt="image" src="https://github.com/user-attachments/assets/36049a6d-43d4-4c78-84b6-16513583388c" />                     <img width="84" alt="image" src="https://github.com/user-attachments/assets/eb994050-b0a3-461f-9335-c3d26a0b3759" />                     <img width="84" alt="image" src="https://github.com/user-attachments/assets/5c6269ab-482c-4b0e-8f6d-0be2b91cc563" />               <img width="83" alt="image" src="https://github.com/user-attachments/assets/94d67743-cfed-4b17-92db-b346f89ccd3a" />
+
+               
+
+
 
 ## Method: submitFeedback(userID, feedbackText)
 - Stores user feedback in the database
 - Updates recommendation algorithm based on feedback
+<img width="85" alt="image" src="https://github.com/user-attachments/assets/2bd2e583-be27-4901-b652-6f5a533b095a" />
 
 ---
 
