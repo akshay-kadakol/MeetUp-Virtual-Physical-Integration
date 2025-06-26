@@ -185,7 +185,7 @@ Method: submitFeedback(userID, feedbackText)
 - Analyzes user preferences
 - Retrieves matching events from the database
 - Displays personalized event list
--                <img width="109" alt="image" src="https://github.com/user-attachments/assets/54c2bb69-fcd9-4d2a-a6f3-d0d882d3ce08" />                 <img width="82" alt="image" src="https://github.com/user-attachments/assets/39a44a3f-1a68-4182-ba06-8035faae6969" />
+  <img width="109" alt="image" src="https://github.com/user-attachments/assets/54c2bb69-fcd9-4d2a-a6f3-d0d882d3ce08" />                 <img width="82" alt="image" src="https://github.com/user-attachments/assets/39a44a3f-1a68-4182-ba06-8035faae6969" />
 
 
 
@@ -193,7 +193,7 @@ Method: submitFeedback(userID, feedbackText)
 - Validates Email and Phone
 - Sends event invitation via Email/SMS
 - Confirms successful invitation
--                             <img width="82" alt="image" src="https://github.com/user-attachments/assets/36049a6d-43d4-4c78-84b6-16513583388c" />                     <img width="84" alt="image" src="https://github.com/user-attachments/assets/eb994050-b0a3-461f-9335-c3d26a0b3759" />                     <img width="84" alt="image" src="https://github.com/user-attachments/assets/5c6269ab-482c-4b0e-8f6d-0be2b91cc563" />               <img width="83" alt="image" src="https://github.com/user-attachments/assets/94d67743-cfed-4b17-92db-b346f89ccd3a" />
+-   <img width="82" alt="image" src="https://github.com/user-attachments/assets/36049a6d-43d4-4c78-84b6-16513583388c" />                     <img width="84" alt="image" src="https://github.com/user-attachments/assets/eb994050-b0a3-461f-9335-c3d26a0b3759" />                     <img width="84" alt="image" src="https://github.com/user-attachments/assets/5c6269ab-482c-4b0e-8f6d-0be2b91cc563" />               <img width="83" alt="image" src="https://github.com/user-attachments/assets/94d67743-cfed-4b17-92db-b346f89ccd3a" />
 
                
 
